@@ -16,11 +16,14 @@
 <div class="product-display">
   <div class="product-container">
     <div class="product-image">
-      <!-- image goes here -->
+      
+      <img v-bind:src="image" :alt="description">
     </div>
     <div class="product-info">
       <h1>{{ product }}</h1>
+      <a :href="url">code with anderson</a>
     </div>
+
   </div>
 </div>
 
