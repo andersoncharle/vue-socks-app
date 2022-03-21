@@ -45,8 +45,6 @@ app.component('product-display',{
 
   </div>
 </div>`,
-// Inorder to simplify the ES6 syntax shorthand are used instead.
-    // so shorthand syntax is data(){ return { data: 'value' }}
     data: function() {
         return{
             product: product,
