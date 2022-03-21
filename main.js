@@ -28,6 +28,7 @@ const app = Vue.createApp({
         },
         updateVariant(index) {
             this.selectedVariant = index
+            console.log(index);
           },
         removeFromCart(){
             if (this.cart >= 1) {
@@ -38,13 +39,13 @@ const app = Vue.createApp({
     computed: {
       title(){
           return this.brand + ' ' + this.product
-      },
-      image() {
-        return this.variants[this.selectedVariant].image
-      },
-      inStock() {
-        return this.variants[this.selectedVariant].quantity
       }
+    //   image() {
+    //     return this.variants[this.selectedVariant].image
+    //   },
+    //   instock() {
+    //     return this.variants[this.selectedVariant].quantity
+    //   }
 
     }
 })
