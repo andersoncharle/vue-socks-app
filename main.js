@@ -15,7 +15,7 @@ const app = Vue.createApp({
             details: ['20% wool','30% cotton','20% polyester'],
             variants: [
                 { id: 2123,color : 'green',image: './assets/images/socks_green.jpg',quantity: 50},
-                { id: 2124,color : 'blue',image: './assets/images/socks_blue.jpg',quantity: 0},
+                { id: 2124,color : 'blue',image: './assets/images/socks_blue.jpg',quantity: 0}
             ],
             sizes: ['S', 'M', 'L', 'XL'],
             cart: 0,
