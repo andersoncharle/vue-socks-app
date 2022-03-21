@@ -1,7 +1,7 @@
 app.component('product-display',{
 // object to configure our componets
    template: 
-/*html*/ 
+   /*html*/    
   `<div class="product-display">
   <div class="product-container">
     <div class="product-image">
