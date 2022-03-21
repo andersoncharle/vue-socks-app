@@ -39,13 +39,13 @@ const app = Vue.createApp({
     computed: {
       title(){
           return this.brand + ' ' + this.product
+      },
+      image() {
+        return this.variants[this.selectedVariant].image
+      },
+      instock() {
+        return this.variants[this.selectedVariant].quantity
       }
-    //   image() {
-    //     return this.variants[this.selectedVariant].image
-    //   },
-    //   instock() {
-    //     return this.variants[this.selectedVariant].quantity
-    //   }
 
     }
 })
