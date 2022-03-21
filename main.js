@@ -6,6 +6,7 @@ const app = Vue.createApp({
     data: function() {
         return{
             product: product,
+            brand: "blackmitnick",
             description: "This is socks product",
             image: './assets/images/socks_green.jpg',
             url: 'https://github.com/blackmitnick/vue-socks-app',
@@ -34,5 +35,10 @@ const app = Vue.createApp({
                 this.cart -= 1
             }
         }
+    },
+    computed: {
+      title(){
+          return this.brand + ' ' + this.product
+      }      
     }
 })
