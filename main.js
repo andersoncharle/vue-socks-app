@@ -8,15 +8,16 @@ const app = Vue.createApp({
             product: product,
             brand: "blackmitnick",
             description: "This is socks product",
-            image: './assets/images/socks_green.jpg',
+            selectedVariant: 0,
+
             url: 'https://github.com/blackmitnick/vue-socks-app',
-            instock: false,
+            instock: true,
             inventory: 100,
             onSale: true,
             details: ['20% wool','30% cotton','20% polyester'],
             variants: [
-                { id: 2123,color : 'green',image: './assets/images/socks_green.jpg'},
-                { id: 2124,color : 'blue',image: './assets/images/socks_blue.jpg'},
+                { id: 2123,color : 'green',image: './assets/images/socks_green.jpg',quantity: 50},
+                { id: 2124,color : 'blue',image: './assets/images/socks_blue.jpg',quantity: 0},
             ],
             sizes: ['S', 'M', 'L', 'XL'],
             cart: 0,
@@ -27,9 +28,9 @@ const app = Vue.createApp({
         addToCart(){
             this.cart += 1
         },
-        updateImage(variantImage){
-            this.image = variantImage
-        },
+        updateVariant(index) {
+            this.selectedVariant = index
+          },
         removeFromCart(){
             if (this.cart >= 1) {
                 this.cart -= 1
@@ -39,6 +40,13 @@ const app = Vue.createApp({
     computed: {
       title(){
           return this.brand + ' ' + this.product
-      }      
+      },
+      image() {
+        return this.variants[this.selectedVariant].image
+      },
+      inStock() {
+        return this.variants[this.selectedVariant].quantity
+      }
+
     }
 })
