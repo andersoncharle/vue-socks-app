@@ -62,7 +62,7 @@ app.component('product-display',{
                 { id: 2124,color : 'blue',image: './assets/images/socks_blue.jpg',quantity: 0}
             ],
             sizes: ['S', 'M', 'L', 'XL'],
-            cart: 0,
+            
             onSale : true
 
         }
