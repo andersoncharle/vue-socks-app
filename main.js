@@ -9,9 +9,7 @@ const app = Vue.createApp({
             brand: "blackmitnick",
             description: "This is socks product",
             selectedVariant: 0,
-
             url: 'https://github.com/blackmitnick/vue-socks-app',
-            instock: true,
             inventory: 100,
             onSale: true,
             details: ['20% wool','30% cotton','20% polyester'],
